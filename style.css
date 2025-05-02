@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; 
+  z-index: 1000; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+  overflow-x: hidden; /* Adicionado */
+  box-sizing: border-box; /* Garante que padding/margin não cause overflow */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  max-width: 100%; /* Evita expansão além da viewport */
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex; 
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Adicionado para prevenir overflow em hover */
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 5px 0; /* Garante espaço interno sem expandir fora */
+  display: inline-block; /* Garante que o pseudo-elemento fique dentro */
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6c47ff;
+  transition: width 0.3s ease;
+  pointer-events: none; /* Evita interferência em hover */
+}
+
+.nav-links li a:hover {
+  color: #6c47ff; 
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  padding-top: 50px; 
+}
+.apresentacao-main-inicio {
+  background: #6c47ff;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.apresentacao-main-inicio-conteudo {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -0px; /* sobreposição parcial */
+}
+
+.apresentacao-main-inicio-texto {
+  padding: 0px 50px;
+  background: #6c47ff;
+  width: 50vw;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f5f5f5;
+}
+
+.apresentacao-main-inicio-texto h1 {
+  font-size: 52px;
+}
+
+/*https://uiverse.io/Madflows/stale-baboon-45*/
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.btn-port, .btn-contato {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.apresentacao-main-inicio-img {
+  padding: 15px;
+  background: #6c47ff;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apresentacao-main-inicio-img img {
+  display: block;
+  width: 350px;
+  border-radius: 8px;
+  border-radius: 50% 40% 60% 50% / 60% 40% 60% 50%;
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+.apresentacao-main-inicio-recorte {
+  position: relative;
+  z-index: 1;
+}
+
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
